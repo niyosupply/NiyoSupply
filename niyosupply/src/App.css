@@ -157,6 +157,108 @@ footer {
   font-size: 14px;
 }
 
+/* REGISTER PAGE */
+
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.register-container {
+  background: rgba(255, 255, 255, 0.95);
+  color: #1c3b2f;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  max-width: 600px;
+  width: 100%;
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1c3b2f;
+  font-size: 32px;
+}
+
+.form-section {
+  margin-bottom: 25px;
+}
+
+.form-section h3 {
+  color: #1c3b2f;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #8b8a2c;
+}
+
+.name-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.suffix-input {
+  max-width: 180px;
+}
+
+.register-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.register-container input:focus {
+  outline: none;
+  border-color: #1c3b2f;
+}
+
+.register-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 2px solid #ddd;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  background-color: white;
+  cursor: pointer;
+}
+
+.register-container select:focus {
+  outline: none;
+  border-color: #1c3b2f;
+}
+
+.register-btn {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to right, #1c3b2f, #8b8a2c);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.register-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(28, 59, 47, 0.4);
+}
+
 /* MOBILE RESPONSIVE */
 
 @media (max-width: 900px) {
@@ -179,6 +281,18 @@ footer {
 
   .nav-links {
     margin-top: 10px;
+  }
+
+  .register-container {
+    padding: 25px;
+  }
+
+  .name-row {
+    grid-template-columns: 1fr;
+  }
+
+  .suffix-input {
+    max-width: 100%;
   }
 
 }
