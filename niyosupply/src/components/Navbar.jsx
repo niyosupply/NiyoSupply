@@ -1,19 +1,54 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link, useLocation } from "react-router-dom";
 
-function Navbar() {
+function Navbar({ user, cartCount }) {
+  const location = useLocation();
+  const isHome = location.pathname === "/";
+  const isLogin = location.pathname === "/login";
+  const isRegister = location.pathname === "/register";
+
   return (
-    <nav className="navbar">
-      <h2>NiyoSupply</h2>
+    <>
+      {!isLogin && !isRegister && (
+        <div className="top-bar">
+          <Link to="/profile" className="account-chip">
+            <div className="account-icon">👤</div>
+            <div className="account-text">
+              <div className="big">{user.signedIn ? user.fullName : "Guest Account"}</div>
+              <div className="small">{user.signedIn ? "signed in" : "sign in"}</div>
+            </div>
+          </Link>
 
-      <div className="nav-links">
-        <Link to="/">Home</Link>
-        <Link to="/store">Shop</Link>
-        <Link to="/products">Products</Link>
-        <Link to="/cart">Cart</Link>
-        <Link to="/profile">Account</Link>
-      </div>
-    </nav>
+          <Link to="/cart" className="cart-circle">
+            🛒
+            {cartCount > 0 && <span className="cart-badge">{cartCount}</span>}
+          </Link>
+        </div>
+      )}
+
+      <nav className="bottom-nav">
+        <NavLink to="/" className={({ isActive }) => `nav-item ${isActive || isHome ? "active" : ""}`}>
+          <div className="nav-bubble">
+            <div className="nav-icon">⌂</div>
+          </div>
+          <div>Home</div>
+        </NavLink>
+
+        <NavLink to="/store" className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}>
+          <div className="nav-bubble">
+            <div className="nav-icon">🛍</div>
+          </div>
+          <div>Shop</div>
+        </NavLink>
+
+        <NavLink to="/profile" className={({ isActive }) => `nav-item ${isActive ? "active" : ""}`}>
+          <div className="nav-bubble">
+            <div className="nav-icon">👤</div>
+          </div>
+          <div>Account</div>
+        </NavLink>
+      </nav>
+    </>
   );
 }
 

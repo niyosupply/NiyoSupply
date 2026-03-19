@@ -1,19 +1,16 @@
 import React from "react";
 
-function ProductCard({ product }) {
+function ProductCard({ product, addToCart }) {
   return (
-    <div className="product-card">
-
-      <img src={product.image} alt={product.name} />
-
-      <h3>{product.name}</h3>
-
-      <p>{product.description}</p>
-
-      <span className="price">₱{product.price}</span>
-
-      <button>Add to Cart</button>
-
+    <div className="product-card" onClick={() => addToCart(product.id)}>
+      <div className="product-image-wrap">
+        <img src={product.image} alt={product.name} />
+        <div className="price-pill">₱{product.price.toFixed(2)}</div>
+      </div>
+      <div className="product-text">
+        <div className="product-name">{product.name}</div>
+        <div className="product-desc">{product.description}</div>
+      </div>
     </div>
   );
 }

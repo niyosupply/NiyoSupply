@@ -1,38 +1,10 @@
-body {
+html,
+body,
+#root {
   margin: 0;
-  font-family: Arial;
-  background: linear-gradient(to right, #1c3b2f, #8a8b2c);
-  color: white;
+  min-height: 100%;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px;
-  background: #1c3b2f;
-}
-
-.nav-links a {
-  margin-left: 15px;
-  color: white;
-  text-decoration: none;
-}
-
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.product-card {
-  background: white;
-  color: black;
-  padding: 10px;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #1c3b2f;
+body {
+  background: linear-gradient(90deg, #1a5a47 0%, #7a7810 50%, #0d564c 100%);
 }
