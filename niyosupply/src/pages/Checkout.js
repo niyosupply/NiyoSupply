@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Checkout({ cartItems, cartTotal, placeOrder }) {
+function Checkout(props) {
+  const cartItems = props.cartItems;
+  const cartTotal = props.cartTotal;
+  const placeOrder = props.placeOrder;
   const navigate = useNavigate();
+
   const [payment, setPayment] = useState("GCash");
   const [receive, setReceive] = useState("Delivery");
 

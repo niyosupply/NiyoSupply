@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import ProductCard from "../components/ProductCard";
 
-function Storefront({ products, addToCart }) {
+function Storefront(props) {
+  const products = props.products;
+  const addToCart = props.addToCart;
   const [search, setSearch] = useState("");
 
   const filtered = products.filter((p) =>

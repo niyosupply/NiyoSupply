@@ -1,8 +1,11 @@
 import React from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 
-function Navbar({ user, cartCount }) {
+function Navbar(props) {
+  const user = props.user;
+  const cartCount = props.cartCount;
   const location = useLocation();
+
   const isHome = location.pathname === "/";
   const isLogin = location.pathname === "/login";
   const isRegister = location.pathname === "/register";

@@ -150,7 +150,7 @@ function App() {
     );
   }
 
-  function signIn(email, password) {
+  function signIn(email) {
     setUser((prev) => ({
       ...prev,
       email: email || prev.email,
@@ -189,20 +189,11 @@ function App() {
 
         <main className="page-wrap">
           <Routes>
-            <Route
-              path="/"
-              element={<Home products={products} addToCart={addToCart} />}
-            />
+            <Route path="/" element={<Home products={products} addToCart={addToCart} />} />
             <Route path="/login" element={<Login signIn={signIn} />} />
             <Route path="/register" element={<Register register={register} />} />
-            <Route
-              path="/store"
-              element={<Storefront products={products} addToCart={addToCart} />}
-            />
-            <Route
-              path="/products"
-              element={<Products products={products} addToCart={addToCart} />}
-            />
+            <Route path="/store" element={<Storefront products={products} addToCart={addToCart} />} />
+            <Route path="/products" element={<Products products={products} addToCart={addToCart} />} />
             <Route
               path="/cart"
               element={
@@ -217,7 +208,11 @@ function App() {
             <Route
               path="/checkout"
               element={
-                <Checkout cartItems={cartItems} cartTotal={cartTotal} placeOrder={placeOrder} />
+                <Checkout
+                  cartItems={cartItems}
+                  cartTotal={cartTotal}
+                  placeOrder={placeOrder}
+                />
               }
             />
             <Route path="/history" element={<History transactions={transactions} />} />

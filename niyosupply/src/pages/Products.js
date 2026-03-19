@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-function Products({ products, addToCart }) {
+function Products(props) {
+  const products = props.products;
+  const addToCart = props.addToCart;
   const [search, setSearch] = useState("");
 
   const filtered = products.filter((p) =>

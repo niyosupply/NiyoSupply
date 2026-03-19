@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Cart({ cartItems, increaseQty, decreaseQty, cartTotal }) {
+function Cart(props) {
+  const cartItems = props.cartItems;
+  const increaseQty = props.increaseQty;
+  const decreaseQty = props.decreaseQty;
+  const cartTotal = props.cartTotal;
+
   return (
     <div className="cart-page">
       <div className="back-btn">←</div>

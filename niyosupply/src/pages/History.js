@@ -1,6 +1,8 @@
 import React from "react";
 
-function History({ transactions }) {
+function History(props) {
+  const transactions = props.transactions;
+
   return (
     <div className="history-box">
       <div className="page-heading">Transaction History</div>

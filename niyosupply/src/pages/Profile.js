@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function Profile({ user }) {
+function Profile(props) {
+  const user = props.user;
+
   return (
     <div className="profile-box">
       <div className="page-heading">Profile</div>

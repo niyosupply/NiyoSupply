@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Register({ register }) {
+function Register(props) {
+  const register = props.register;
   const navigate = useNavigate();
+
   const [form, setForm] = useState({
     email: "",
     password: "",

@@ -1,6 +1,9 @@
 import React from "react";
 
-function ProductCard({ product, addToCart }) {
+function ProductCard(props) {
+  const product = props.product;
+  const addToCart = props.addToCart;
+
   return (
     <div className="product-card" onClick={() => addToCart(product.id)}>
       <div className="product-image-wrap">
