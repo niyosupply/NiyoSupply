@@ -12,7 +12,7 @@ function Storefront(props) {
 
   return (
     <div>
-      <div className="page-heading">Storefront</div>
+      <div className="page-heading">Products</div>
 
       <div className="search-box">
         <div className="search-left">
