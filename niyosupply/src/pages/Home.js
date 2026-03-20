@@ -13,7 +13,7 @@ function Home(props) {
 
   return (
     <div>
-      <div className="center-title">TITLE</div>
+      <div className="center-title">NiyoSupply</div>
 
       <div className="search-box">
         <div className="search-left">
