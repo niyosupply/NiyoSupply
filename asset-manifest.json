@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/NiyoSupply/static/css/main.e2fafb41.css",
+    "main.js": "/NiyoSupply/static/js/main.4a90374c.js",
+    "index.html": "/NiyoSupply/index.html",
+    "main.e2fafb41.css.map": "/NiyoSupply/static/css/main.e2fafb41.css.map",
+    "main.4a90374c.js.map": "/NiyoSupply/static/js/main.4a90374c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e2fafb41.css",
+    "static/js/main.4a90374c.js"
+  ]
+}
